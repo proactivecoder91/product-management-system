@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+.form-grid {
+    width: 60%;
+    padding: 20px; 
+  }
+  
+.form-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; 
+  }
+
+mat-form-field {
+    width: 48%; 
+  }
+  
+button {
+    margin-top: 15px;
+    width: 20%; 
+    display: block;
+    margin: 0 auto;
+  }
+  

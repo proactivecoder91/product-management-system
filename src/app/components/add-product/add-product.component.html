@@ -1,1 +1,39 @@
-<p>add-product works!</p>
+<mat-card class="form-grid" [formGroup]="addProductForm">
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Enter Product Name</mat-label>
+      <input matInput formControlName="productName" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Product price</mat-label>
+      <input type="number" matInput formControlName="price" />
+    </mat-form-field>
+  </div>
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Enter Product Category</mat-label>
+      <input matInput formControlName="category" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Product brand</mat-label>
+      <input matInput formControlName="brand" />
+    </mat-form-field>
+  </div>
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Enter Quantity In Stock</mat-label>
+      <input type="number" matInput formControlName="quantityInStock" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Product Supplier</mat-label>
+      <input type="number" matInput formControlName="supplier" />
+    </mat-form-field>
+  </div>
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Enter Product description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="accent">Submit</button>
+</mat-card>
