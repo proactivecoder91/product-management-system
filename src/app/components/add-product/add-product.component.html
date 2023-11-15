@@ -12,7 +12,11 @@
   <div class="form-layout">
     <mat-form-field>
       <mat-label>Enter Product Category</mat-label>
-      <input matInput formControlName="category" />
+      <mat-select>
+        @for (productCategory of productCategories; track productCategory){
+        <mat-option [value]="productCategory">{{ productCategory }}</mat-option>
+        }
+      </mat-select>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Enter Product brand</mat-label>
