@@ -1,3 +1,4 @@
+<h1>Add a Product!</h1>
 <mat-card class="form-grid" [formGroup]="addProductForm">
   <div class="form-layout">
     <mat-form-field>
@@ -12,7 +13,7 @@
   <div class="form-layout">
     <mat-form-field>
       <mat-label>Enter Product Category</mat-label>
-      <mat-select>
+      <mat-select formControlName="category">
         @for (productCategory of productCategories; track productCategory){
         <mat-option [value]="productCategory">{{ productCategory }}</mat-option>
         }
@@ -31,6 +32,42 @@
     <mat-form-field>
       <mat-label>Enter Product Supplier</mat-label>
       <input type="number" matInput formControlName="supplier" />
+    </mat-form-field>
+  </div>
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Enter Weight of the product</mat-label>
+      <input type="number" matInput formControlName="weight" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter dimensions of the product</mat-label>
+      <input type="string" matInput formControlName="dimensions" />
+    </mat-form-field>
+  </div>
+  <div class="form-layout">
+    <mat-form-field>
+      <mat-label>Choose Manufacturing Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="manufacturingDate"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Availability Status</mat-label>
+      <mat-select formControlName="availabilityStatus">
+        @for (availabilityStatus of availabilityStatuses; track
+        availabilityStatus){
+        <mat-option [value]="availabilityStatus">{{
+          availabilityStatus
+        }}</mat-option>
+        }
+      </mat-select>
     </mat-form-field>
   </div>
   <div class="form-layout">
