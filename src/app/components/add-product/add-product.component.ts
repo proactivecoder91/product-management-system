@@ -9,6 +9,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -21,7 +22,7 @@ export class AddProductComponent {
   addProductForm!: FormGroup;
   productCategories:string[] = ['Electronics','Food','Cosmetics'];
   availabilityStatuses:string[]=['Available','Unavailable'];
-constructor(private fb: FormBuilder){
+constructor(private fb: FormBuilder, private productService:ProductService){
   this.addProductForm = this.fb.group({
       productName: ['', Validators.required],
       price: ['', Validators.required],
@@ -35,5 +36,9 @@ constructor(private fb: FormBuilder){
       manufacturingDate:[''],
       availabilityStatus: ['']
   })
+}
+
+submitProduct(){
+  this.productService.addProduct(this.addProductForm.value).subscribe(data => console.log(data), error => console.error(error))
 }
 }

@@ -1,6 +1,32 @@
 {
-    "products": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ]
-  }
-  
+  "products": [
+    {
+      "productName": "laptop",
+      "price": 65000,
+      "category": "Electronics",
+      "brand": "hp",
+      "quantityInStock": 4,
+      "supplier": "Kyle and sons",
+      "description": "cool laptop ngl",
+      "weight": 500,
+      "dimensions": "10x10x1",
+      "manufacturingDate": "2023-11-01T18:30:00.000Z",
+      "availabilityStatus": "Available",
+      "id": 1
+    },
+    {
+      "productName": "TV",
+      "price": 65000,
+      "category": "Electronics",
+      "brand": "sony",
+      "quantityInStock": 4,
+      "supplier": "Kyle and sons",
+      "description": "cool tv ngl",
+      "weight": 500,
+      "dimensions": "10x10x1",
+      "manufacturingDate": "2023-11-01T18:30:00.000Z",
+      "availabilityStatus": "Available",
+      "id": 2
+    }
+  ]
+}

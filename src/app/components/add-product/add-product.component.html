@@ -31,13 +31,14 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Enter Product Supplier</mat-label>
-      <input type="number" matInput formControlName="supplier" />
+      <input type="string" matInput formControlName="supplier" />
     </mat-form-field>
   </div>
   <div class="form-layout">
     <mat-form-field>
       <mat-label>Enter Weight of the product</mat-label>
       <input type="number" matInput formControlName="weight" />
+      <span matSuffix style="color: #757575">(grams)</span>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Enter dimensions of the product</mat-label>
@@ -76,5 +77,7 @@
       <textarea matInput formControlName="description"></textarea>
     </mat-form-field>
   </div>
-  <button mat-raised-button color="accent">Submit</button>
+  <button mat-raised-button color="accent" (click)="submitProduct()">
+    Submit
+  </button>
 </mat-card>
