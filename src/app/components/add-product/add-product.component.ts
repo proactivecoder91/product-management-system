@@ -24,17 +24,17 @@ export class AddProductComponent {
   availabilityStatuses:string[]=['Available','Unavailable'];
 constructor(private fb: FormBuilder, private productService:ProductService){
   this.addProductForm = this.fb.group({
-      productName: ['', Validators.required],
-      price: ['', Validators.required],
-      category: [''],
-      brand: [''],
-      quantityInStock: [''],
-      supplier: [''],
-      description: [''],
-      weight: [''],
-      dimensions: [''],
-      manufacturingDate:[''],
-      availabilityStatus: ['']
+      productName: ['', [Validators.required, Validators.maxLength(50)]],
+      price: ['', [Validators.required, Validators.min(1)]],
+      category: ['',Validators.required],
+      brand: ['', [Validators.required,Validators.maxLength(50)]],
+      quantityInStock: ['',[Validators.required, Validators.min(1)]],
+      supplier: ['',[Validators.required,Validators.maxLength(50)]],
+      description: ['', [Validators.required,Validators.maxLength(100)]],
+      weight: ['',[Validators.required, Validators.min(1)]],
+      dimensions: ['', Validators.required],
+      manufacturingDate:['',Validators.required],
+      availabilityStatus: ['',Validators.required]
   })
 }
 
