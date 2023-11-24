@@ -14,4 +14,8 @@ export class ProductService {
   getProductList(): Observable<any[]>{
     return this.http.get<any[]>("http://localhost:3000/products");
   }
+
+  getProductDetail(id:number){
+    return this.http.get<any[]>("http://localhost:3000/products/"+id)
+  }
 }

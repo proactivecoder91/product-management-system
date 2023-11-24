@@ -1,0 +1,28 @@
+.product-heading {
+    color: #333; 
+    font-size: 4rem; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-align: center;
+  }
+
+.head-style{
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+}
+
+  mat-label{
+    color: #333;
+    font-weight: bold;
+  }
+
+  mat-form-field{
+    margin: 10px;
+  }
+
+  mat-card{
+    width: 65%;
+    margin: 0 auto;
+  }
+
